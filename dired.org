@@ -16,6 +16,7 @@ needed to show thumbnails and images.
 | q          | Quit dired mode                        |
 |------------+----------------------------------------|
 | RET        | Open selected directory                |
+| +          | Insert new Directory                   |
 | i          | Show contents of subdirectory          |
 | ^          | Return to parent directory             |
 | f          | Open selected file                     |
