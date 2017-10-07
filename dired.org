@@ -1,0 +1,79 @@
+* Dired
+
+** Config
+
+Part of standard emacs, no config needed, although imagemagick is
+needed to show thumbnails and images.
+
+
+** Usage
+
+
+| Keybinding | Description                            |
+|------------+----------------------------------------|
+| C-x d      | Opens dired mode                       |
+| g          | Refresh dired buffer                   |
+| q          | Quit dired mode                        |
+|------------+----------------------------------------|
+| RET        | Open selected directory                |
+| i          | Show contents of subdirectory          |
+| ^          | Return to parent directory             |
+| f          | Open selected file                     |
+| o          | Open selected file in other window     |
+|------------+----------------------------------------|
+| C          | Copy file(s)                           |
+| D          | Delete file(s)                         |
+| R          | Rename file(s)                         |
+| M          | Change Mode (permissions)  of files(s) |
+| Z          | Zip or unZip file(s)                   |
+|------------+----------------------------------------|
+
+
+*** Find by name
+
+M-x find-name-dired
+
+Reads arguments /directory/ and /pattern/ and shows all the files in
+/directory/ or its subdirectories whose individual names match
+/pattern/.
+
+So to find all .org files in directory ~/Projects and its
+subdirectories:
+
+- M-x find-name-dired
+- ~/Projects
+- *.org
+- Put cursor on file you were looking for
+- RET
+
+
+*** Find text in file
+
+M-x find-grep-dired
+
+Reads arguments /directory/ and /regexp/ and shows all the files in
+/directory/ or its subdirectories that contain a match for /regexp/.
+
+So to find the file(s) which contain the text 'directory' in
+~/Projects/emacs and its subdirectories:
+
+- M-x find-grep-dired
+- ~/Projects
+- directory
+
+
+*** Viewing image thumbnails
+
+M-x image-dired
+
+Reads argument /directory/, finds image files within that directory
+and shows thumbnails of those images.
+
+You can select the thumbnails one by one and typing <RET> will display
+a sized version of the image in another buffer.
+
+
+** Links
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html#Dired][Dired, The Directory Editor - GNU Emacs manual]] 
+
