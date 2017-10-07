@@ -1,0 +1,39 @@
+* Neotree
+
+** Config
+
+In .emacs:
+
+#+BEGIN_SRC emacs-lisp
+;; neotree for easy (2 way) project navigation
+;; bind to f8
+;; smart open to let neotree jump to node of currently opened file
+(use-package neotree
+  :ensure t)
+(global-set-key [f8] 'neotree-toggle)
+;; (setq neo-smart-open f)
+#+END_SRC
+
+
+** Usage
+
+
+| Keybinding | Description                      |
+|------------+----------------------------------|
+| f8         | Toggle neotree                   |
+|------------+----------------------------------|
+| g          | Refresh neotree                  |
+| H          | Toggle display hidden files      |
+|------------+----------------------------------|
+| C-c C-n    | Create a new file or directory   |
+| C-c C-d    | Delete a file or directory       |
+| C-c C-r    | Rename a file or directory       |
+| C-c C-c    | Change root directory to display |
+|------------+----------------------------------|
+
+
+** Links
+
+- [[https://github.com/jaypei/emacs-neotree][Neotree on Github (jaypei)]]
+- [[https://www.emacswiki.org/emacs/NeoTree][Neotree on emacswiki]]
+
