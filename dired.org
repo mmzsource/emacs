@@ -30,6 +30,17 @@ needed to show thumbnails and images.
 |------------+----------------------------------------|
 
 
+*** Create new file
+
+This works inside and outside a dired buffer:
+
+| Keybinding                | Description                                       |
+|---------------------------+---------------------------------------------------|
+| C-x C-f <your-filename>   | Find file (or create one if it doesn't yet exist) |
+| M-! touch <your-filename> | Simply run the touch shell cmd                    |
+|---------------------------+---------------------------------------------------|
+
+
 *** Find by name
 
 M-x find-name-dired
