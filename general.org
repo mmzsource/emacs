@@ -1,1 +1,68 @@
-General out-of-the-box emacs information gathered from several sources.
+General out-of-the-box emacs information gathered from multiple sources.
+
+* =C= & =M=
+
+The =C= or control key (as for instance in =C-h=) is the ctrl key
+The =M= or Meta key (as for instance in =M-f=) is the alt key
+
+Very often Meta characters are used for operations related to the units defined
+by language (words, sentences, paragraphs), while Control characters operate on
+basic units that are independent of what you are editing (characters, lines,
+etc). For example:
+
+| Keybinding | Description                   |
+|------------+-------------------------------|
+| =C-f=      | Forward one cursor position   |
+| =M-f=      | Forward one word              |
+| =C-b=      | Backward one cursor position  |
+| =M-b=      | Backward one word             |
+| =C-a=      | Move to beginning of line     |
+| =M-a=      | Move to beginning of sentence |
+| =C-e=      | Move to end of line           |
+| =M-e=      | Move to end of sentence       |
+|------------+-------------------------------|
+
+* Help
+
+Because I have installed =which-key=, key bindings following the currently typed
+incomplete command will display the next possible keys in a popup. So typing
+=C-h= will give you all possible help functions (bound to a key).
+
+Furthermore, because I have installed =smex= there will be autocompletion for
+commands when using =M-x=. So typing =M-x= and then typing (parts of) your
+command, will quickly reveal your options. The selected function's keybinding
+can be found (in smex) with =C-h w= and it's documentation can be found with
+=C-h f=.
+
+A couple of often used help bindings:
+
+| =C-h C-h=              | help for help                                   |
+|------------------------+-------------------------------------------------|
+| =C-h k= =<keybinding>= | display information about the =<keybinding>=    |
+| =C-h m=                | view documentation on the current major mode    |
+| =C-h f= =<function>=   | describe =<function>=                           |
+| =C-h a= =<keyword>=    | list all commands containing =<keyword>=        |
+| =C-h v=                | check value of a variable (e.g. user-init-file) |
+| =C-h b=                | list all key bindings                           |
+|------------------------+-------------------------------------------------|
+
+* Stop
+
+| keybinding | description                                           |
+|------------+-------------------------------------------------------|
+| =C-x C-c=  | Stop emacs session (emacs asks which buffers to save) |
+| =C-g=      | Discard a command you do not want to finish           |
+| =C-g=      | Stop the execution of long running command            |
+|------------+-------------------------------------------------------|
+
+* Smile
+
+- =M-x doctor=
+- =M-x blackbox=
+- =M-x emacs-uptime=
+- =M-x fireplace=
+- =M-x lunar-phases=
+- =M-x morse-region= & =M-x unmorse-region=
+- =M-x pong=
+- =M-x snake=
+- =M-x tetris=
