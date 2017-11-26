@@ -1,6 +1,6 @@
 General out-of-the-box emacs information gathered from multiple sources.
 
-* =C= & =M=
+* =C= ontrol & =M= eta
 
 The =C= or control key (as for instance in =C-h=) is the ctrl key. The =M= or
 Meta key (as for instance in =M-f=) is the alt key
@@ -21,6 +21,59 @@ etc). For example:
 | =C-e=      | Move to end of line           |
 | =M-e=      | Move to end of sentence       |
 |------------+-------------------------------|
+* Commands and Functions
+
+A command is a function that is accessible to the user. For a function to be
+accessible to the user, it must be /interactive/. An interactive function has
+additional properties, rendering it usable through the =M-x= and key bindings.
+
+When you press a key a special command is invoked: =self-insert-command= that
+will insert the last typed key. This makes keys and commands 'symmetric':
+regular keyboard characters behave in exactly the same way as all other commands
+in emacs. This also means keyboard characters can be unbound, rebound and
+modified in every way you want to.
+
+* Frames, Windows, Buffers & Modes
+** Windows & Frames
+
+In emacs a /window/ is a tiled portion of the /frame/. The /frame/ is what most
+window managers call a window. So you can have one or more /windows/ in a
+/frame/. Each window displays exactly one /buffer/.
+
+** Buffers
+
+In emacs, /the buffer is the data structure/. All files are buffers, but not all
+buffers are files. You can create a buffer for whatever reason and you won't be
+asked for a filename. You have to explicitly save it to a file on disk to make
+it persist. Types of buffers:
+
+- Text Buffer
+- File
+- I/O device
+- API to other process like bash or python or a clojure repl
+
+Almost all of Emac's own commands act on buffers. So the same commands you use
+to move around and edit in emacs are the same once you use behind-the-scenes in
+elisp.
+
+** Modes
+
+Major modes in emacs control how buffers behave. Each buffer will always have
+only one major mode. Emacs will almost always find the right major mode
+automatically (e.g. by filetype). Additionally you are free to change a buffer's
+major mode at any time by typing the command for another one. Minor modes are
+typically optional add-ons that you enable for some (or all) of your buffers.
+
+* Key Sequences, prefix keys & complete keys
+
+A /key sequence/ is a series of keyboard or mouse actions. A /complete key/ is a
+series of keyboard or mouse actions that /invoke a command/ (e.g. =C-x C-f= to
+invoke the =find-file= command). If the sequence of keys is not a complete key,
+then you have a /prefix key/ (e.g. =C-x=)
+
+* Universal Arguments
+
+=Bookmark=
 
 * Help
 
@@ -31,8 +84,8 @@ incomplete command will display the next possible keys in a popup. So typing
 Furthermore, because I have installed =smex= there will be autocompletion for
 commands when using =M-x=. So typing =M-x= and then typing (parts of) your
 command, will quickly reveal your options. The selected functions keybinding
-can be found (in smex) with =C-h w= and its documentation can be found with
-=C-h f=.
+can be found (in smex) with =C-h w= (*w* hich key) and its documentation can be found with
+=C-h f= (*f* unction description).
 
 A couple of often used help bindings:
 
@@ -61,7 +114,7 @@ A couple of often used help bindings:
 - =C-x u= to undo
 
 In out-of-the-box emacs =C-x u= is bound to normal undo, in my case it is bound
-to the undo-tree package to visualizes and navigate the undo-redo tree and its
+to the undo-tree package to visualize and navigate the undo-redo tree and its
 branches.
 
 * Smile
