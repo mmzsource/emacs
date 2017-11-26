@@ -55,6 +55,13 @@ A couple of often used help bindings:
 | =C-g=      | Stop the execution of long running command            |
 |------------+-------------------------------------------------------|
 
+* Undo
+
+- =C-x u= to undo
+
+In out-of-the-box emacs bound to normal undo, in my case bound to the undo-tree
+package to visualizes and navigate the undo-redo tree and its branches.
+
 * Smile
 
 - =M-x doctor=
