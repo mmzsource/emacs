@@ -94,7 +94,7 @@ times'.
 | =C-M--=            | Negative argument     |
 |--------------------+-----------------------|
 
-Normally =C--= would also be the negative argument, but I bound that one to
+Normally =C--= would also be the negative argument, but I've bound that to
 resizing the window (zooming out).
 
 Example usage:
@@ -119,16 +119,17 @@ can be found (in smex) with =C-h w= (*w* hich key) and its documentation can be 
 
 A couple of often used help bindings:
 
-| keybinding             | description                                     |
-|------------------------+-------------------------------------------------|
-| =C-h C-h=              | help for help                                   |
-| =C-h k= =<keybinding>= | information about the =<keybinding>=            |
-| =C-h m=                | current major mode documentation                |
-| =C-h f= =<function>=   | describe =<function>=                           |
-| =C-h a= =<keyword>=    | list all commands containing =<keyword>=        |
-| =C-h v=                | check value of a variable (e.g. user-init-file) |
-| =C-h b=                | list all key bindings                           |
-|------------------------+-------------------------------------------------|
+| keybinding             | description                                       |
+|------------------------+---------------------------------------------------|
+| =C-h C-h=              | help for help                                     |
+| =C-h k= =<keybinding>= | information about the =<keybinding>=              |
+| =C-h m=                | current major mode documentation                  |
+| =C-h f= =<function>=   | describe =<function>=                             |
+| =C-h a= =<keyword>=    | apropos: list all commands containing =<keyword>= |
+| =C-h v=                | check value of a variable (e.g. user-init-file)   |
+| =C-h b=                | list all key bindings                             |
+| =C-h i=                | open emacs info manual (also =M-x info=)          |
+|------------------------+---------------------------------------------------|
 
 * Stop
 

@@ -3,7 +3,11 @@ don't use it that often.
 
 * Out-of-the-box emacs
 
+- =M-x make-frame= → Make a new frame. Handy sometimes to have a separate
+  documentation frame.
+
 - =M-x customize= → Customize emacs
+- =M-x customize-themes= → View and customize emacs themes
 
 - =C-x 8= → character map
 
