@@ -71,9 +71,39 @@ series of keyboard or mouse actions that /invoke a command/ (e.g. =C-x C-f= to
 invoke the =find-file= command). If the sequence of keys is not a complete key,
 then you have a /prefix key/ (e.g. =C-x=)
 
-* Universal Arguments
+* Universal Argument
 
-=Bookmark=
+Some commands have alternate states. You modify the states by prefixing the
+command key sequence with the /universal/ prefix argument: =C-u= . What happens
+next depends on the command you're invoking: some have zero, one or more
+universal argument states. Command states are merely numbers. =C-u= means '4
+times'.
+
+- =C-u a=     → aaaa
+- =C-u 10 a=  → aaaaaaaaaa
+- =C-u C-u a= → aaaaaaaaaaaaaaaa
+
+| keybinding         | description           |
+|--------------------+-----------------------|
+| =C-u=              | Digit argument 4      |
+| =C-u C-u=          | Digit argument 16     |
+| =M-0 /to/ M-9=     | Digit argument 0 to 9 |
+| =C-0 /to/ C-9=     | Digit argument 0 to 9 |
+| =C-M-0 /to/ C-M-9= | Digit argument 0 to 9 |
+| =M--=              | Negative argument     |
+| =C-M--=            | Negative argument     |
+|--------------------+-----------------------|
+
+Normally =C--= would also be the negative argument, but I bound that one to
+resizing the window (zooming out).
+
+Example usage:
+
+| keybinding | description            |
+|------------+------------------------|
+| =M-d=      | Kill word after point  |
+| =M-- M-d=  | Kill word before point |
+|------------+------------------------|
 
 * Help
 

@@ -3,6 +3,8 @@ don't use it that often.
 
 * Out-of-the-box emacs
 
+- =M-x customize= → Customize emacs
+
 - =C-x 8= → character map
 
 * Dired
