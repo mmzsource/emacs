@@ -2,8 +2,8 @@ General out-of-the-box emacs information gathered from multiple sources.
 
 * =C= & =M=
 
-The =C= or control key (as for instance in =C-h=) is the ctrl key
-The =M= or Meta key (as for instance in =M-f=) is the alt key
+The =C= or control key (as for instance in =C-h=) is the ctrl key. The =M= or
+Meta key (as for instance in =M-f=) is the alt key
 
 Very often Meta characters are used for operations related to the units defined
 by language (words, sentences, paragraphs), while Control characters operate on
@@ -30,16 +30,17 @@ incomplete command will display the next possible keys in a popup. So typing
 
 Furthermore, because I have installed =smex= there will be autocompletion for
 commands when using =M-x=. So typing =M-x= and then typing (parts of) your
-command, will quickly reveal your options. The selected function's keybinding
-can be found (in smex) with =C-h w= and it's documentation can be found with
+command, will quickly reveal your options. The selected functions keybinding
+can be found (in smex) with =C-h w= and its documentation can be found with
 =C-h f=.
 
 A couple of often used help bindings:
 
-| =C-h C-h=              | help for help                                   |
+| keybinding             | description                                     |
 |------------------------+-------------------------------------------------|
-| =C-h k= =<keybinding>= | display information about the =<keybinding>=    |
-| =C-h m=                | view documentation on the current major mode    |
+| =C-h C-h=              | help for help                                   |
+| =C-h k= =<keybinding>= | information about the =<keybinding>=            |
+| =C-h m=                | current major mode documentation                |
 | =C-h f= =<function>=   | describe =<function>=                           |
 | =C-h a= =<keyword>=    | list all commands containing =<keyword>=        |
 | =C-h v=                | check value of a variable (e.g. user-init-file) |
@@ -59,13 +60,14 @@ A couple of often used help bindings:
 
 - =C-x u= to undo
 
-In out-of-the-box emacs bound to normal undo, in my case bound to the undo-tree
-package to visualizes and navigate the undo-redo tree and its branches.
+In out-of-the-box emacs =C-x u= is bound to normal undo, in my case it is bound
+to the undo-tree package to visualizes and navigate the undo-redo tree and its
+branches.
 
 * Smile
 
-- =M-x doctor=
 - =M-x blackbox=
+- =M-x doctor=
 - =M-x emacs-uptime=
 - =M-x fireplace=
 - =M-x lunar-phases=
