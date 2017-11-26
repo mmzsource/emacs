@@ -1,0 +1,1 @@
+General out-of-the-box emacs information gathered from several sources.

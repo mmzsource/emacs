@@ -1,0 +1,12 @@
+Some quick reminders of excellent functionality you might forget because you
+don't use it that often.
+
+* Out-of-the-box emacs
+
+- =C-x 8= → character map
+
+* Dired
+
+- =M-x find-name-dired=
+- =M-x find-grep-dired=
+- =M-x image-dired=

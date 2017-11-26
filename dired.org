@@ -1,10 +1,8 @@
 * Dired
-
 ** Config
 
 Part of standard emacs, no config needed, although imagemagick is
 needed to show thumbnails and images.
-
 
 ** Usage
 
@@ -40,7 +38,6 @@ This works inside and outside a dired buffer:
 | M-! touch <your-filename> | Simply run the touch shell cmd                    |
 |---------------------------+---------------------------------------------------|
 
-
 *** Find by name
 
 M-x find-name-dired
@@ -58,7 +55,6 @@ subdirectories:
 - Put cursor on file you were looking for
 - RET
 
-
 *** Find text in file
 
 M-x find-grep-dired
@@ -73,7 +69,6 @@ So to find the file(s) which contain the text 'directory' in
 - ~/Projects
 - directory
 
-
 *** Viewing image thumbnails
 
 M-x image-dired
@@ -83,7 +78,6 @@ and shows thumbnails of those images.
 
 You can select the thumbnails one by one and typing <RET> will display
 a sized version of the image in another buffer.
-
 
 ** Links
 
