@@ -87,5 +87,4 @@ a sized version of the image in another buffer.
 
 ** Links
 
-- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html#Dired][Dired, The Directory Editor - GNU Emacs manual]] 
-
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html#Dired][Dired, The Directory Editor - GNU Emacs manual]]
