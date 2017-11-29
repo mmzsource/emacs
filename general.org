@@ -56,6 +56,14 @@ Almost all of Emac's own commands act on buffers. So the same commands you use
 to move around and edit in emacs are the same once you use behind-the-scenes in
 elisp.
 
+Buffers are rarely killed (closed) when no longer needed. That is no problem
+since each buffer is only slightly bigger than the byte size of the characters
+in it. A typical emacs session lasts weeks between restarts, and having many
+hundreds of buffers running is no issue.
+
+Emacs created buffers, or buffers with transient information have * characters
+in their names, like *Messages*. User created buffers normally don't have that.
+
 ** Modes
 
 Major modes in emacs control how buffers behave. Each buffer will always have
@@ -105,6 +113,39 @@ Example usage:
 | =M-- M-d=  | Kill word before point |
 |------------+------------------------|
 
+* Movement
+
+Movement in Emacs is local, regional or global:
+
+- Local: moving around text near point (the cursor)
+- Regional: moving around whole functions, class definitions, chapters, etc.
+- Global: moving around buffers
+
+** Global
+
+| Keybinding    | Meaning                                 |
+|---------------+-----------------------------------------|
+| =C-x b=       | Switch buffer (default: last visited)   |
+| =C-x C-b=     | List running buffers                    |
+| =C-x <right>= | Next Buffer                             |
+| =C-x <left>=  | Previous Buffer                         |
+| =C-x k=       | Kill (close) buffer                     |
+|---------------+-----------------------------------------|
+| =C-x 0=       | Delete /active/ window                  |
+| =C-x 1=       | Delete /other/ windows                  |
+| =C-x 2=       | Split window below                      |
+| =C-x 3=       | Split window right                      |
+| =C-x o=       | Switch active window                    |
+| =C-o=         | Switch active window (personal setting) |
+|---------------+-----------------------------------------|
+
+I'm also using *IDO* mode and *Winner* mode for easily finding buffers and
+easily switching back to previous window configurations. (See config.org file).
+
+Migt also be nice to activate the *windmove* package to switch windows by
+pressing =S-<left>=, =S-<right>=, =S-<up>= & =S-<down>=.
+
+
 * Help
 
 Because I have installed =which-key=, key bindings following the currently typed
@@ -119,34 +160,46 @@ can be found (in smex) with =C-h w= (*w* hich key) and its documentation can be 
 
 A couple of often used help bindings:
 
-| keybinding             | description                                       |
-|------------------------+---------------------------------------------------|
-| =C-h C-h=              | help for help                                     |
-| =C-h k= =<keybinding>= | information about the =<keybinding>=              |
-| =C-h m=                | current major mode documentation                  |
-| =C-h f= =<function>=   | describe =<function>=                             |
-| =C-h a= =<keyword>=    | apropos: list all commands containing =<keyword>= |
-| =C-h v=                | check value of a variable (e.g. user-init-file)   |
-| =C-h b=                | list all key bindings                             |
-| =C-h i=                | open emacs info manual (also =M-x info=)          |
-|------------------------+---------------------------------------------------|
+| keybinding              | description                                       |
+|-------------------------+---------------------------------------------------|
+| =C-h C-h=               | help for help                                     |
+| =C-h k= =<keybinding>=  | information about the =<keybinding>=              |
+| =C-h m=                 | current major mode documentation                  |
+| =C-h f= =<function>=    | describe =<function>=                             |
+| =C-h a= =<keyword>=     | apropos: list all commands containing =<keyword>= |
+| =C-h v=                 | check value of a variable (e.g. user-init-file)   |
+| =C-h b=                 | list all key bindings                             |
+| =C-h i=                 | open emacs info manual (also =M-x info=)          |
+| =F10=                   | Activate menu bar                                 |
+| =M-x menu-bar-mode RET= | Show menubar                                      |
+|-------------------------+---------------------------------------------------|
 
-* Stop
+* Stop / Exit
 
-| keybinding | description                                           |
-|------------+-------------------------------------------------------|
-| =C-x C-c=  | Stop emacs session (emacs asks which buffers to save) |
-| =C-g=      | Discard a command you do not want to finish           |
-| =C-g=      | Stop the execution of long running command            |
-|------------+-------------------------------------------------------|
+| keybinding    | description                                           |
+|---------------+-------------------------------------------------------|
+| =C-x C-c=     | Stop emacs session (emacs asks which buffers to save) |
+| =C-g=         | Discard a command you do not want to finish           |
+| =C-g=         | Stop the execution of long running command            |
+| =ESC ESC ESC= | Exit out of prompts, regions, prefix args, etc.       |
+|---------------+-------------------------------------------------------|
 
 * Undo
 
-- =C-x u= to undo
+- =C-x u= or =C-/= to undo
 
 In out-of-the-box emacs =C-x u= is bound to normal undo, in my case it is bound
 to the undo-tree package to visualize and navigate the undo-redo tree and its
 branches.
+
+* Save
+
+| keybinding | meaning          |
+|------------+------------------|
+| =C-x C-s=  | Save buffer      |
+| =C-x C-w=  | 'Save as ...'    |
+| =C-x s=    | Saving all files |
+|------------+------------------|
 
 * Smile
 
