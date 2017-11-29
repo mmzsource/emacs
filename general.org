@@ -21,6 +21,7 @@ etc). For example:
 | =C-e=      | Move to end of line           |
 | =M-e=      | Move to end of sentence       |
 |------------+-------------------------------|
+
 * Commands and Functions
 
 A command is a function that is accessible to the user. For a function to be
@@ -113,39 +114,6 @@ Example usage:
 | =M-- M-d=  | Kill word before point |
 |------------+------------------------|
 
-* Movement
-
-Movement in Emacs is local, regional or global:
-
-- Local: moving around text near point (the cursor)
-- Regional: moving around whole functions, class definitions, chapters, etc.
-- Global: moving around buffers
-
-** Global
-
-| Keybinding    | Meaning                                 |
-|---------------+-----------------------------------------|
-| =C-x b=       | Switch buffer (default: last visited)   |
-| =C-x C-b=     | List running buffers                    |
-| =C-x <right>= | Next Buffer                             |
-| =C-x <left>=  | Previous Buffer                         |
-| =C-x k=       | Kill (close) buffer                     |
-|---------------+-----------------------------------------|
-| =C-x 0=       | Delete /active/ window                  |
-| =C-x 1=       | Delete /other/ windows                  |
-| =C-x 2=       | Split window below                      |
-| =C-x 3=       | Split window right                      |
-| =C-x o=       | Switch active window                    |
-| =C-o=         | Switch active window (personal setting) |
-|---------------+-----------------------------------------|
-
-I'm also using *IDO* mode and *Winner* mode for easily finding buffers and
-easily switching back to previous window configurations. (See config.org file).
-
-Migt also be nice to activate the *windmove* package to switch windows by
-pressing =S-<left>=, =S-<right>=, =S-<up>= & =S-<down>=.
-
-
 * Help
 
 Because I have installed =which-key=, key bindings following the currently typed
@@ -200,6 +168,38 @@ branches.
 | =C-x C-w=  | 'Save as ...'    |
 | =C-x s=    | Saving all files |
 |------------+------------------|
+
+* Movement
+
+Movement in Emacs is local, regional or global:
+
+- Local: moving around text near point (the cursor)
+- Regional: moving around whole functions, class definitions, chapters, etc.
+- Global: moving around buffers
+
+** Global
+
+| Keybinding    | Meaning                                 |
+|---------------+-----------------------------------------|
+| =C-x b=       | Switch buffer (default: last visited)   |
+| =C-x C-b=     | List running buffers                    |
+| =C-x <right>= | Next Buffer                             |
+| =C-x <left>=  | Previous Buffer                         |
+| =C-x k=       | Kill (close) buffer                     |
+|---------------+-----------------------------------------|
+| =C-x 0=       | Delete /active/ window                  |
+| =C-x 1=       | Delete /other/ windows                  |
+| =C-x 2=       | Split window below                      |
+| =C-x 3=       | Split window right                      |
+| =C-x o=       | Switch active window                    |
+| =C-o=         | Switch active window (personal setting) |
+|---------------+-----------------------------------------|
+
+I'm also using *IDO* mode and *Winner* mode for easily finding buffers and
+easily switching back to previous window configurations. (See config.org file).
+
+Migt also be nice to activate the *windmove* package to switch windows by
+pressing =S-<left>=, =S-<right>=, =S-<up>= & =S-<down>=.
 
 * Smile
 
