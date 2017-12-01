@@ -201,6 +201,31 @@ easily switching back to previous window configurations. In addition, I'm using
 recently used files. I've bound that functionality to =C-x C-r= . See
 =config.org= file.
 
+Acting on the /other/ window:
+
+| Keybinding  | Purpose                            |
+|-------------+------------------------------------|
+| =C-x 4 C-f= | Find file in the other window      |
+| =C-x 4 d=   | Open dired in the other window     |
+| =C-x 4 C-o= | Display buffer in the other window |
+| =C-x 4 ...= | ... Act on other window            |
+|-------------+------------------------------------|
+
+Acting on another frame:
+
+| Keybinding  | Purpose                           |
+|-------------+-----------------------------------|
+| =C-x 5 2=   | Create a new frame                |
+| =C-x 5 b=   | Switch buffer in /other/ frame    |
+| =C-x 5 0=   | Delete /active/ frame             |
+| =C-x 5 1=   | Delete /other/ frame              |
+| =C-x 5 d=   | Open Dired in the other frame     |
+| =C-x 5 o=   | Switch to other frame             |
+| =C-x 5 C-o= | Display buffer in the other frame |
+|-------------+-----------------------------------|
+
+Notice the similarity in the buffer -, window - and frame keybindings.
+
 * Smile
 
 - =M-x blackbox=
