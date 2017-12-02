@@ -181,7 +181,7 @@ Movement in Emacs is local, regional or global:
 
 | Keybinding             | Purpose                                                                    |
 |------------------------+----------------------------------------------------------------------------|
-| <left> , ...           | Arrow keys move by character in all four directions                        |
+| <left> , <right>, ...  | Arrow keys move by character in all four directions                        |
 | =C-<left>= & =C-right= | As above, but by word                                                      |
 | =C-<up>= & =C-<down>=  | Move by (list)item, paragraph, header, etc                                 |
 | =M-<= & =M->=          | Move to beginning and end of buffer                                        |
@@ -196,12 +196,69 @@ Movement in Emacs is local, regional or global:
 | =C-e=                  | Move to the end of the line                                                |
 | =M-m=                  | Move to first non-whitespace char on this line (easy for code indentation) |
 |------------------------+----------------------------------------------------------------------------|
+| =M-f=                  | Move forward by word  (similar to =C-<right>= )                            |
+| =M-b=                  | Move backward by word (similar to =C-<left>= )                             |
+|------------------------+----------------------------------------------------------------------------|
+| =M-a=                  | Move to beginning of sentence                                              |
+| =M-e=                  | Move to end of sentence                                                    |
+|------------------------+----------------------------------------------------------------------------|
+| =M-}=                  | Move forward to end of paragraph                                           |
+| =M-{=                  | Move backward to start of paragraph                                        |
+|------------------------+----------------------------------------------------------------------------|
+
+*Words*
+
+The definition of a word depends on the major mode you're in. A /syntax table/
+gives every character, directly or indirectly, a particular syntactic meaning.
+So in this table things like 'what characters are used for comments, what
+characters make up a word' are defined. Every editor has an equivalent of Emac's
+syntax table, but emacs is special in the sense that you can inspect and change
+the syntax table. You can inspect the current syntax table with the
+=describe-syntax= command, bound to =C-h s=.
+
+Apart from changing the sytax table, there are also commands and even minor
+modes to easily work with CamelCase and snake_case: =subword-mode= and
+=superword-mode= respectively. =glasses-mode= is a minor mode that'll turn
+CamelCase words into Camel_Case /visually/. So the actual buffer is left
+unchanged, the only thing that changes is what you see.
+
+*Lines*
 
 If a line is long, and is wrapped on your screen into 3 lines, that one *logical
 line* is shown as 3 *visual lines* or 3 *screen lines*. After endless debates,
 it was decided that the =C-p= and =C-n= commands move by /visual/ lines, not by
 logical lines. If you don't like that, you alter you emacs settings by changing
 the =line-move-visual= variable.
+
+*Paragraphs*
+
+What a paragraph means is defined by the variables =paragraph-start= and
+=paragraph-separate=. =use-hard-newlines= defines whether a hard newline defines
+a paragraph.
+
+*S-Expressions or Balanced Expressions*
+
+Things like "...", (...), [...], {...}, etc. can span multiple lines and
+are called balanced expressions. What balanced expressions are depends on the
+major mode and its syntax table. In emacs it's easy to navigate over balanced
+expressions:
+
+| Keybinding | Purpose                                                       |
+|------------+---------------------------------------------------------------|
+| =C-M-n=    | Move forward to the next list (in the same nested level)      |
+| =C-M-p=    | Move backward to the previous list (in the same nested level) |
+|------------+---------------------------------------------------------------|
+| =C-M-f=    | Move forward by s-expression                                  |
+| =C-M-b=    | Move backward by s-expression                                 |
+| =C-M-k=    | kill-sexp - kill balanced expression in front of point        |
+|------------+---------------------------------------------------------------|
+| =C-M-d=    | Move down into a list                                         |
+| =C-M-u=    | Move up out of a list                                         |
+|------------+---------------------------------------------------------------|
+| =C-M-a=    | Move to beginning of defun                                    |
+| =C-M-e=    | Move to end of defun                                          |
+|------------+---------------------------------------------------------------|
+
 
 ** Global
 
