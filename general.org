@@ -177,6 +177,32 @@ Movement in Emacs is local, regional or global:
 - Regional: moving around whole functions, class definitions, chapters, etc.
 - Global: moving around buffers
 
+** Local & Regional
+
+| Keybinding             | Purpose                                                                    |
+|------------------------+----------------------------------------------------------------------------|
+| <left> , ...           | Arrow keys move by character in all four directions                        |
+| =C-<left>= & =C-right= | As above, but by word                                                      |
+| =C-<up>= & =C-<down>=  | Move by (list)item, paragraph, header, etc                                 |
+| =M-<= & =M->=          | Move to beginning and end of buffer                                        |
+|------------------------+----------------------------------------------------------------------------|
+| =C-f=                  | Move forward by character                                                  |
+| =C-b=                  | Move backward by character                                                 |
+| =C-p=                  | Move to previous line                                                      |
+| =C-n=                  | Move to next line                                                          |
+| =C-8 C-f=              | Move forward 8 characters                                                  |
+|------------------------+----------------------------------------------------------------------------|
+| =C-a=                  | Move to beginning of the line                                              |
+| =C-e=                  | Move to the end of the line                                                |
+| =M-m=                  | Move to first non-whitespace char on this line (easy for code indentation) |
+|------------------------+----------------------------------------------------------------------------|
+
+If a line is long, and is wrapped on your screen into 3 lines, that one *logical
+line* is shown as 3 *visual lines* or 3 *screen lines*. After endless debates,
+it was decided that the =C-p= and =C-n= commands move by /visual/ lines, not by
+logical lines. If you don't like that, you alter you emacs settings by changing
+the =line-move-visual= variable.
+
 ** Global
 
 | Keybinding    | Meaning                                 |
