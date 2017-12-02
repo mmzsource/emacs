@@ -216,7 +216,7 @@ syntax table, but emacs is special in the sense that you can inspect and change
 the syntax table. You can inspect the current syntax table with the
 =describe-syntax= command, bound to =C-h s=.
 
-Apart from changing the sytax table, there are also commands and even minor
+Apart from changing the syntax table, there are also commands and even minor
 modes to easily work with CamelCase and snake_case: =subword-mode= and
 =superword-mode= respectively. =glasses-mode= is a minor mode that'll turn
 CamelCase words into Camel_Case /visually/. So the actual buffer is left
