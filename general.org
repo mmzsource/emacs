@@ -259,6 +259,16 @@ expressions:
 | =C-M-e=    | Move to end of defun                                          |
 |------------+---------------------------------------------------------------|
 
+*Scrolling*
+
+| Keybinding    | Purpose                        |
+|---------------+--------------------------------|
+| =C-v=         | Scroll down a near full screen |
+| =M-v=         | Scroll up a near full screen   |
+| =C-M-v=       | Scroll down the /other/ window |
+| =C-M-- C-M-v= | Scroll up the /other/ window   |
+| =C-M-S-v=     | Scroll up the /other/ window   |
+|---------------+--------------------------------|
 
 ** Global
 
