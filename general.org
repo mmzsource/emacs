@@ -261,14 +261,21 @@ expressions:
 
 *Scrolling*
 
-| Keybinding    | Purpose                        |
-|---------------+--------------------------------|
-| =C-v=         | Scroll down a near full screen |
-| =M-v=         | Scroll up a near full screen   |
-| =C-M-v=       | Scroll down the /other/ window |
-| =C-M-- C-M-v= | Scroll up the /other/ window   |
-| =C-M-S-v=     | Scroll up the /other/ window   |
-|---------------+--------------------------------|
+| Keybinding    | Purpose                             |
+|---------------+-------------------------------------|
+| =C-v=         | Scroll down a near full screen      |
+| =M-v=         | Scroll up a near full screen        |
+| =C-M-v=       | Scroll down the /other/ window      |
+| =C-M-- C-M-v= | Scroll up the /other/ window        |
+| =C-M-S-v=     | Scroll up the /other/ window        |
+|---------------+-------------------------------------|
+| =M-<=         | Move to the beginning of the buffer |
+| =M->=         | Move to the end of the buffer       |
+|---------------+-------------------------------------|
+
+When moving to th beginning or the end of the buffer, emacs will
+place /the mark/ - an invisible location marker - where you came from , so you
+can return to your old position with =C-u C-<SPC>=.
 
 ** Global
 
@@ -318,6 +325,23 @@ Acting on another frame:
 |-------------+-----------------------------------|
 
 Notice the similarity in the buffer -, window - and frame keybindings.
+
+*Bookmarks*
+
+Like webbrowser bookmarks, but with wider variety of sources:
+
+- files
+- =M-x= dired directories
+- =M-x= man pages
+- remote files (because of TRAMP)
+- etc.
+
+| Keybinding | Purpose            |
+|------------+--------------------|
+| C-x r m    | Set a book(m)ark   |
+| C-x r l    | (l)ist bookmarks   |
+| C-x r b    | Jump to (b)ookmark |
+|------------+--------------------|
 
 * Smile
 
