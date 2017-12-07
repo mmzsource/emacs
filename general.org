@@ -343,6 +343,28 @@ Like webbrowser bookmarks, but with wider variety of sources:
 | C-x r b    | Jump to (b)ookmark |
 |------------+--------------------|
 
+The variable =bookmark-default-file= describes the storage location of our
+bookmarks.
+
+Strangly enough, you cannot bookmark eww buffers by default. I understand there
+are extensions that have this capability.
+
+*Registers*
+
+Bookmarks are permanent, registers are transient. Registers can store: window
+and frameset configs, points, numbers and text.
+
+| Keybinding | Purpose                           |
+|------------+-----------------------------------|
+| =C-x r s=  | (s)tore region in register        |
+| =C-x r i=  | (i)nsert content of register      |
+| =C-x r w=  | store (w)indow config in register |
+| =C-x r f=  | store (f)rameset in register      |
+|------------+-----------------------------------|
+
+A register is a single character only. Might come in handy when you need to copy
+and paste multiple regions of text.
+
 * Smile
 
 - =M-x blackbox=
