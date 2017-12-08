@@ -179,6 +179,8 @@ Movement in Emacs is local, regional or global:
 
 ** Local & Regional
 
+*** Bindings
+
 | Keybinding             | Purpose                                                                    |
 |------------------------+----------------------------------------------------------------------------|
 | <left> , <right>, ...  | Arrow keys move by character in all four directions                        |
@@ -206,7 +208,7 @@ Movement in Emacs is local, regional or global:
 | =M-{=                  | Move backward to start of paragraph                                        |
 |------------------------+----------------------------------------------------------------------------|
 
-*Words*
+*** Words
 
 The definition of a word depends on the major mode you're in. A /syntax table/
 gives every character, directly or indirectly, a particular syntactic meaning.
@@ -222,7 +224,7 @@ modes to easily work with CamelCase and snake_case: =subword-mode= and
 CamelCase words into Camel_Case /visually/. So the actual buffer is left
 unchanged, the only thing that changes is what you see.
 
-*Lines*
+*** Lines
 
 If a line is long, and is wrapped on your screen into 3 lines, that one *logical
 line* is shown as 3 *visual lines* or 3 *screen lines*. After endless debates,
@@ -230,13 +232,13 @@ it was decided that the =C-p= and =C-n= commands move by /visual/ lines, not by
 logical lines. If you don't like that, you alter you emacs settings by changing
 the =line-move-visual= variable.
 
-*Paragraphs*
+*** Paragraphs
 
 What a paragraph means is defined by the variables =paragraph-start= and
 =paragraph-separate=. =use-hard-newlines= defines whether a hard newline defines
 a paragraph.
 
-*S-Expressions or Balanced Expressions*
+*** S-Expressions or Balanced Expressions
 
 Things like "...", (...), [...], {...}, etc. can span multiple lines and
 are called balanced expressions. What balanced expressions are depends on the
@@ -259,7 +261,26 @@ expressions:
 | =C-M-e=    | Move to end of defun                                          |
 |------------+---------------------------------------------------------------|
 
-*Scrolling*
+*** Selections and Regions
+
+The region: the contiguous block of text between the point and the mark. You can
+set the mark with =C-<SPC>=. The echo area will give you feedback with "Mark
+Set." Moving the cursor around will now visually change the region. =C-g= will
+deactivate the region. Some commands set a mark automatically (like =M-<= and
+=M->=). This way you can easily move back to the old position by using =C-u
+C-<SPC>=. More calls to =C-u C-<SPC>= will move you further baack in the mark
+ring (containing all marks you have placed in a buffer). There is also a
+/global mark ring/ for commands that work across buffer boundaries.
+
+
+If you want to set a mark just to return to it later, you have to:
+
+- Set the Mark =C-<SPC>=
+- Deactivate the Region =C-<SPC>=
+- Move to any other place
+- Return to the place where the mark was set =C-u C-<SPC>=
+
+*** Scrolling
 
 | Keybinding    | Purpose                             |
 |---------------+-------------------------------------|
@@ -278,6 +299,8 @@ place /the mark/ - an invisible location marker - where you came from , so you
 can return to your old position with =C-u C-<SPC>=.
 
 ** Global
+
+*** Bindings
 
 | Keybinding    | Meaning                                 |
 |---------------+-----------------------------------------|
@@ -326,7 +349,7 @@ Acting on another frame:
 
 Notice the similarity in the buffer -, window - and frame keybindings.
 
-*Bookmarks*
+*** Bookmarks
 
 Like webbrowser bookmarks, but with wider variety of sources:
 
@@ -349,7 +372,7 @@ bookmarks.
 Strangly enough, you cannot bookmark eww buffers by default. I understand there
 are extensions that have this capability.
 
-*Registers*
+*** Registers
 
 Bookmarks are permanent, registers are transient. Registers can store: window
 and frameset configs, points, numbers and text.
