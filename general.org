@@ -268,7 +268,7 @@ set the mark with =C-<SPC>=. The echo area will give you feedback with "Mark
 Set." Moving the cursor around will now visually change the region. =C-g= will
 deactivate the region. Some commands set a mark automatically (like =M-<= and
 =M->=). This way you can easily move back to the old position by using =C-u
-C-<SPC>=. More calls to =C-u C-<SPC>= will move you further baack in the mark
+C-<SPC>=. More calls to =C-u C-<SPC>= will move you further back in the mark
 ring (containing all marks you have placed in a buffer). There is also a
 /global mark ring/ for commands that work across buffer boundaries.
 
@@ -279,6 +279,22 @@ If you want to set a mark just to return to it later, you have to:
 - Deactivate the Region =C-<SPC>=
 - Move to any other place
 - Return to the place where the mark was set =C-u C-<SPC>=
+
+Precise selections:
+
+| Key Bindings     | Purpose                     |
+|------------------+-----------------------------|
+| =M-h=            | Marks the next paragraph    |
+| =C-M-h=          | Marks the next defun        |
+| =C-M-@=          | Marks the next s-expression |
+| =C-M-<SPC>=      | Marks the next s-expression |
+| =M-@=            | Marks the next word         |
+| =C-x h=          | Marks the whole buffer      |
+| =C-<SPC>=, =C-g= | Deactivates the region      |
+|------------------+-----------------------------|
+
+Mark 2 words: =M-@= =M-@= or =M-2 M-@=. Mark word before point: =M-- M-@=. Mark 2
+words before point: =M-- M-2 M-@=.
 
 *** Scrolling
 
@@ -297,6 +313,7 @@ If you want to set a mark just to return to it later, you have to:
 When moving to th beginning or the end of the buffer, emacs will
 place /the mark/ - an invisible location marker - where you came from , so you
 can return to your old position with =C-u C-<SPC>=.
+
 
 ** Global
 
@@ -387,6 +404,7 @@ and frameset configs, points, numbers and text.
 
 A register is a single character only. Might come in handy when you need to copy
 and paste multiple regions of text.
+
 
 * Smile
 
