@@ -290,6 +290,7 @@ Precise selections:
 | =C-M-<SPC>=      | Marks the next s-expression |
 | =M-@=            | Marks the next word         |
 | =C-x h=          | Marks the whole buffer      |
+| =C-x C-p=        | Marks the next page         |
 | =C-<SPC>=, =C-g= | Deactivates the region      |
 |------------------+-----------------------------|
 
