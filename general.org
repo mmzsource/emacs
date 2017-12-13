@@ -290,12 +290,14 @@ Precise selections:
 | =C-M-<SPC>=      | Marks the next s-expression |
 | =M-@=            | Marks the next word         |
 | =C-x h=          | Marks the whole buffer      |
-| =C-x C-p=        | Marks the next page         |
 | =C-<SPC>=, =C-g= | Deactivates the region      |
 |------------------+-----------------------------|
 
 Mark 2 words: =M-@= =M-@= or =M-2 M-@=. Mark word before point: =M-- M-@=. Mark 2
 words before point: =M-- M-2 M-@=.
+
+All mark commands /append to the existing selection/ if you already have a
+region active.
 
 *** Scrolling
 
@@ -314,7 +316,6 @@ words before point: =M-- M-2 M-@=.
 When moving to th beginning or the end of the buffer, emacs will
 place /the mark/ - an invisible location marker - where you came from , so you
 can return to your old position with =C-u C-<SPC>=.
-
 
 ** Global
 
@@ -405,6 +406,9 @@ and frameset configs, points, numbers and text.
 
 A register is a single character only. Might come in handy when you need to copy
 and paste multiple regions of text.
+
+** Searching and indexing
+
 
 
 * Smile
