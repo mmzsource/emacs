@@ -409,6 +409,37 @@ and paste multiple regions of text.
 
 ** Searching and indexing
 
+*** Isearch
+
+| Keybinding | Purpose                                               |
+|------------+-------------------------------------------------------|
+| =C-s=      | Begin incremental search                              |
+| =C-r=      | Begin backward incremental search                     |
+| =C-M-s=    | Begin regexp incremental search                       |
+| =C-M-r=    | Begin regexp backward incremental search              |
+| =RET=      | Pick the selected match (and marks original position) |
+| =C-g=      | Exit ISearch (and return to original position)        |
+|------------+-------------------------------------------------------|
+
+- Browse matches with =C-s= (forward) and =C-r= (backward).
+- =RET= terminates Isearch, leaves you at the match you are at /and/ it drops a
+  mark at your original location. Therefore you can return to your former
+  location with the normal =C-u C-<SPC>= keybinding.
+- By default, Isearches are not case sensitive, but if you use uppercase letter
+  in your search, emacs will switch to case-sensitive search (the so called
+  /case folding/)
+
+Isearch history features:
+
+| Keybinding | Purpose                                            |
+|------------+----------------------------------------------------|
+| =M-n=      | Move to next item in search history                |
+| =M-p=      | Move to previous item in search history            |
+| =C-M-i=    | "TAB" complete search string against history       |
+| =C-s C-s=  | Begins Isearch agains last search string           |
+| =C-r C-r=  | Begins backward Isearch against last search string |
+|------------+----------------------------------------------------|
+
 
 
 * Smile
