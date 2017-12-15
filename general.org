@@ -440,7 +440,47 @@ Isearch history features:
 | =C-r C-r=  | Begins backward Isearch against last search string |
 |------------+----------------------------------------------------|
 
+Isearch 'string at point' features:
 
+| Keybinding | Purpose                                        |
+|------------+------------------------------------------------|
+| =C-w=      | Add word at point to search string             |
+| =C-y=      | Yank ("paste") from clipboard to search string |
+|------------+------------------------------------------------|
+
+Repeated invocations of =C-w= will add subsequent words to the search string.
+
+*** Occur
+
+Grep like utility in emacs to search for regular expressions.
+
+| Keybinding        | Purpose                                                |
+|-------------------+--------------------------------------------------------|
+| =M-x occur <RET>= | Occur mode                                             |
+| =M-s o=           | Occur mode                                             |
+| =M-s o=           | Activate occur on current search string inside Isearch |
+|-------------------+--------------------------------------------------------|
+
+Use =M-g M-n=, =M-g M-p= to jump /in current buffer/ to next and previous match
+displayed in the (other) occur buffer.
+
+Enable context lines (lines before and after the matching line) by customizing
+the variable =list-matching-lines-default-context-lines=.
+
+In the occur buffer:
+
+| Keybinding   | Purpose                                          |
+|--------------+--------------------------------------------------|
+| =M-n=, =M-p= | Go to next and previous occurrence               |
+| =<=, =>=     | Go to beginning and end of buffer                |
+| =g=          | Revert the buffer, refreshing the search results |
+| =q=          | Quits occur mode                                 |
+| =e=          | Switches to occur edit mode                      |
+| =C-c C-c=    | Apply change and exit occur edit mode            |
+|--------------+--------------------------------------------------|
+
+With =M-x multi-occur-in-matching-buffers= and =M-x multi-occur= you can also
+search in multiple buffers.
 
 * Smile
 
