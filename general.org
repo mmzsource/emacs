@@ -493,6 +493,12 @@ Will help with completion when finding files or directories or switching
 buffers.
 
 
+* Calc
+
+Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
+tutorials]], but don't forget the mode help, the tutorial in emacs and the manual
+info pages on the web.
+
 * Smile
 
 - =M-x blackbox=
