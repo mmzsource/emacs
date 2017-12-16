@@ -408,7 +408,6 @@ A register is a single character only. Might come in handy when you need to copy
 and paste multiple regions of text.
 
 ** Searching and indexing
-
 *** Isearch
 
 | Keybinding | Purpose                                               |
@@ -481,6 +480,18 @@ In the occur buffer:
 
 With =M-x multi-occur-in-matching-buffers= and =M-x multi-occur= you can also
 search in multiple buffers.
+
+*** Imenu
+
+Jumps to points of interest in each major mode that has defined them. Can be
+invoked with =M-x imenu=, but I have added the keybinding =M-i=. Using =<TAB>=,
+imenu will suggest points of interest in the current buffer.
+
+*** Ido: Interactively DO things
+
+Will help with completion when finding files or directories or switching
+buffers.
+
 
 * Smile
 
