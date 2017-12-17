@@ -492,6 +492,20 @@ imenu will suggest points of interest in the current buffer.
 Will help with completion when finding files or directories or switching
 buffers.
 
+*** Grep
+
+| Keybinding      | Purpose                                                                             |
+|-----------------+-------------------------------------------------------------------------------------|
+| =M-x lgrep=     | Prompts for query and glob pattern to search for with /grep/                        |
+| =M-x rgrep=     | Prompts for query and glob pattern to search for recursively with /grep/ and /find/ |
+| =M-x rzgrep=    | Like =M-x rgrep= but searches /compressed/ gzip files                               |
+|-----------------+-------------------------------------------------------------------------------------|
+| =M-x grep=      | Prompts for arguments to pass to /grep/                                             |
+| =M-x grep-find= | Prompts for arguments to pass to grep /and/ find                                    |
+|-----------------+-------------------------------------------------------------------------------------|
+
+
+TBD: using the grep interface & grep-dired (zie config)
 
 * Calc
 
