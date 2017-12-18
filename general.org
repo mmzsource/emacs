@@ -504,8 +504,59 @@ buffers.
 | =M-x grep-find= | Prompts for arguments to pass to grep /and/ find                                    |
 |-----------------+-------------------------------------------------------------------------------------|
 
+**** Dired - Find by name
 
-TBD: using the grep interface & grep-dired (zie config)
+M-x find-name-dired
+
+Reads arguments /directory/ and /pattern/ and shows all the files in
+/directory/ or its subdirectories whose individual names match
+/pattern/.
+
+So to find all .org files in directory ~/Projects and its
+subdirectories:
+
+- M-x find-name-dired
+- ~/Projects
+- *.org
+- Put cursor on file you were looking for
+- RET
+
+**** Dired - Find text in file
+
+M-x find-grep-dired
+
+Reads arguments /directory/ and /regexp/ and shows all the files in
+/directory/ or its subdirectories that contain a match for /regexp/.
+
+So to find the file(s) which contain the text 'directory' in
+~/Projects/emacs and its subdirectories:
+
+- M-x find-grep-dired
+- ~/Projects
+- directory
+
+*** Other movement commands
+
+| Keybinding | Purpose                                                                 |
+|------------+-------------------------------------------------------------------------|
+| =M-r=      | Re- *position* point to top left, middle left, bottom left              |
+| =C-l=      | Re- *center* point to middle, top or bottom in the buffer               |
+| =C-M-l=    | Re- *position* the comment or definition so it is in view in the buffer |
+| =M-g M-g=  | Go to line                                                              |
+| =M-g TAB=  | Go to column                                                            |
+| =M-g c=    | Go to character position                                                |
+|------------+-------------------------------------------------------------------------|
+
+Jumping to a line or column or char, you can either use the keybinding and then
+provide the number when asked for OR use a prefix argument. So if you want to
+jump to line 55 you have 2 options:
+
+1. =M-g M-g= 55
+2. =M-5 M-5 M-g M-g=
+
+Line numbers can be shown with =M-x linum-mode= . Another option is to use =M-x
+line-number-mode= . In my configuration, current line and column number are
+displayed in the information line.
 
 * Calc
 
