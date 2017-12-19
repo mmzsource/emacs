@@ -558,6 +558,23 @@ Line numbers can be shown with =M-x linum-mode= . Another option is to use =M-x
 line-number-mode= . In my configuration, current line and column number are
 displayed in the information line.
 
+* Editing
+
+** Killing and Yanking Text
+
+| Keybinding        | Purpose                     |
+|-------------------+-----------------------------|
+| =C-d=             | *Delete* character          |
+| =<backspace>=     | *Delete* previous character |
+| =M-d=             | Kill word                   |
+| =C-<backspace>=   | Kill previous word          |
+| =C-k=             | Kill rest of the line       |
+| =M-k=             | Kill rest of the sentence   |
+| =C-M-k=           | Kill s-expression           |
+| =C-S-<backspace>= | Kill current line           |
+|-------------------+-----------------------------|
+
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
