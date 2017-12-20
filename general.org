@@ -574,6 +574,16 @@ displayed in the information line.
 | =C-S-<backspace>= | Kill current line           |
 |-------------------+-----------------------------|
 
+Deleted text is /not/ retained in the kill ring, whereas /killed/ text is.
+
+Keeping the pace with digit arguments:
+
+- Delete 3 next chars:       =C-3 C-d=
+- Kill 3 next words:         =M-3 M-d=
+- Kill 3 next s-expressions: =C-M-3 C-M-k=
+
+Of course you can also move backwards with the negative argument, like for
+instance: =M-- M-d= or =C-- C-d=.
 
 * Calc
 
