@@ -585,6 +585,42 @@ Keeping the pace with digit arguments:
 Of course you can also move backwards with the negative argument, like for
 instance: =M-- M-d= or =C-- C-d=.
 
+** Clipboard-equivalent commands
+
+| Keybinding | Kill Ring Purpose                              | Clipboard |
+|------------+------------------------------------------------+-----------|
+| =C-w=      | Kill active region                             | cut       |
+| =M-w=      | Copy to kill ring                              | copy      |
+| =C-M-w=    | Append kill                                    |           |
+| =C-y=      | Yank last kill                                 | paste     |
+| =M-y=      | Cycle through kill ring, replacing yanked text |           |
+|------------+------------------------------------------------+-----------|
+
+In most editors, there is a clear delineation between clipboard commands – that
+act solely and exclusively on the selected text – and commands that delete text.
+In Emacs, all commands will kill text straight to your kill ring (with few
+exceptions like =<backspace>= and =C-d=).
+
+Kill command rules:
+
+1) *Consecutive kills append* to the kill ring. They will append text in the
+   kill ring if the last command was also a kill command. As soon as you use a
+   command other than a kill command, the next kill command will make a new
+   entry in the kill ring. This is convenient, because you don't have to select
+   text first. So =M-d= =M-d= =M-d= (killing 3 words in a row) will lead to 3
+   appended words in the kill ring. But =M-d= =M-d= =C-n= =M-d= will have only
+   one word in the last kill ring position.
+2) *The kill ring can hold many items*. This is convenient, if you want to use
+   the kill ring as a temp store for several snippets of code of text.
+3) *The kill ring is global* and between all the buffers in emacs. You can view
+   the kill ring by running =C-h v kill-ring=.
+4) *Killing is also deleting* when you don't care about the killed text. This is
+   convenient, because you'll never lose anything.
+5) *Marking is unnecessary* for most operations. It's easier to tap =M-d= a few
+   times than to mark a region with =M-@= and only then kill it with =C-w=. (For
+   copying it is easier to mark and then copy).
+
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
