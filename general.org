@@ -620,6 +620,11 @@ Kill command rules:
    times than to mark a region with =M-@= and only then kill it with =C-w=. (For
    copying it is easier to mark and then copy).
 
+** Kill lines
+
+- =C-S-<backspace>=
+
+
 
 * Calc
 
