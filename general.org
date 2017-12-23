@@ -560,7 +560,7 @@ displayed in the information line.
 
 * Editing
 
-** Killing and Yanking Text
+** Kill Text
 
 | Keybinding        | Purpose                     |
 |-------------------+-----------------------------|
@@ -622,9 +622,20 @@ Kill command rules:
 
 ** Kill lines
 
-- =C-S-<backspace>=
+| Keybinding        | Purpose                                    |
+|-------------------+--------------------------------------------|
+| =C-S-<backspace>= | Kill whole line (no matter where point is) |
+| =C-k=             | Kill line from point                       |
+|-------------------+--------------------------------------------|
 
 
+** Yank Text
+
+| Keybinding | Purpose                                       |
+|------------+-----------------------------------------------|
+| =C-y=      | Yank last kill                                |
+| =M-y=      | Cycle through kill ring replacing yanked text |
+|------------+-----------------------------------------------|
 
 * Calc
 
