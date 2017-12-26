@@ -628,7 +628,6 @@ Kill command rules:
 | =C-k=             | Kill line from point                       |
 |-------------------+--------------------------------------------|
 
-
 ** Yank Text
 
 | Keybinding | Purpose                                       |
@@ -650,6 +649,23 @@ Kill command rules:
 | =M-x transpose-sentences=  | Transpose sentences     |
 |----------------------------+-------------------------|
 
+** Filling
+
+| Keybinding           | Purpose                           |
+|----------------------+-----------------------------------|
+| =M-q=                | Refills the paragraph point is in |
+| =C-x f=              | Sets the fill column width        |
+| =C-x .=              | Sets the fill prefix              |
+| =M-x auto-fill-mode= | Toggles auto-filling              |
+|----------------------+-----------------------------------|
+
+- Use =M-q= in code comments; most major modes set a 'best practice' fill width
+  for that programming language or file type.
+- Use =C-u= before =M-q= and emacs will also try to justify the text (!)
+- Use =C-x f= to insert a different paragraph width than the default one.
+- Use =C-x .= to set a fill prefix. For instance, if you want to prefix the
+  whole paragraph with "    ", you set that as a fill prefix and =M-q= the
+  paragraph. To undo the fill prefix, type =C-x .= in an empty line.
 
 * Calc
 
