@@ -659,13 +659,29 @@ Kill command rules:
 | =M-x auto-fill-mode= | Toggles auto-filling              |
 |----------------------+-----------------------------------|
 
-- Use =M-q= in code comments; most major modes set a 'best practice' fill width
-  for that programming language or file type.
+- Use =M-q= in on normal textual paragraphs, but also on code comments; most
+  major modes set a 'best practice' fill width for that programming language or
+  file type.
 - Use =C-u= before =M-q= and emacs will also try to justify the text (!)
 - Use =C-x f= to insert a different paragraph width than the default one.
 - Use =C-x .= to set a fill prefix. For instance, if you want to prefix the
   whole paragraph with "    ", you set that as a fill prefix and =M-q= the
   paragraph. To undo the fill prefix, type =C-x .= in an empty line.
+
+** Commenting
+
+| Keybinding        | Purpose                                                |
+|-------------------+--------------------------------------------------------|
+| =M-;=             | Comment or uncomment DWIM                              |
+| =C-x C-;=         | Comment or uncomment line                              |
+| =M-x comment-box= | Comment the region but as a box                        |
+| =M-j=             | Insert newline and continue with comment on a new line |
+| =C-M-j=           | Insert newline and continue with comment on a new line |
+|-------------------+--------------------------------------------------------|
+
+Some variables to control comments: ~comment-style~, ~comment-styles~,
+~comment-start~, ~comment-end~, ~comment-padding~. Also useful when working in
+teams.
 
 * Calc
 
