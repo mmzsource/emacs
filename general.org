@@ -683,6 +683,41 @@ Some variables to control comments: ~comment-style~, ~comment-styles~,
 ~comment-start~, ~comment-end~, ~comment-padding~. Also useful when working in
 teams.
 
+** Search and Replace
+
+You can search and replace with or without regexp. In addition, you can also
+search and replace from inside or outside Isearch.
+
+| Keybinding           | Purpose                         |
+|----------------------+---------------------------------|
+| =M-%=                | Query search and replace        |
+| =C-M-%=              | Query regexp search and replace |
+| =M-x replace-string= | Search and  replace             |
+| =M-x replace-regexp= | Regexp search and replace       |
+|----------------------+---------------------------------|
+
+Access from within iSearch:
+
+| Isearch keybinding | Purpose                         |
+|--------------------+---------------------------------|
+| =C-M-%=            | Query regexp search and replace |
+| =M-%=              | Query search and replace        |
+|--------------------+---------------------------------|
+
+Interactive Query commands:
+
+| Query keybinding | Purpose                            |
+|------------------+------------------------------------|
+| =SPC= or =y=     | Replaces one match, then continues |
+| =.=              | Replaces one match, then exits     |
+| =,=              | Replace, but stay at current match |
+| =RET= or =q=     | Exits without replacing match      |
+| =!=              | Replaces all matches in buffer     |
+| =^=              | Moves point back to previous match |
+| =u= or =U=       | Undo last / all replacement(s)     |
+|------------------+------------------------------------|
+
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
