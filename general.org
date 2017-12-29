@@ -805,6 +805,12 @@ buffer).
 Emacs has a lot more macro capacities under the hood. The =C-x C-k= prefix will
 show the possibilities (bound to keys), because I'm using the which-key package.
 
+** Indenting
+
+Emacs will insert a newline character when you press =RET= but it will also
+invoke the major mode's indentation engine (thanks to ~electric-indent-mode~)
+which (depending on your major mode) will indent your file correctly.
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
