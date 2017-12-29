@@ -478,6 +478,9 @@ In the occur buffer:
 | =C-c C-c=    | Apply change and exit occur edit mode            |
 |--------------+--------------------------------------------------|
 
+In edit mode, you can edit the matches and commit the changes to their original
+lines with =C-c C-c=.
+
 With =M-x multi-occur-in-matching-buffers= and =M-x multi-occur= you can also
 search in multiple buffers.
 
@@ -765,6 +768,42 @@ Emacs can count a lot of things for you, the most used ones being
 To see what emacs can count, it's best to use apropos help: =C-h a= 'count'.
 
 
+** Keyboard Macros
+
+| Keybinding      | Purpose               |
+|-----------------+-----------------------|
+| =F3=            | Start Macro Recording |
+| =F4=            | Stop Macro Recording  |
+| =C-x e= or =F4= | Play last macro       |
+|-----------------+-----------------------|
+
+Sometimes I have to convert a normal list into an org checklist:
+
+- Normal
+- List
+- To
+- Checklist
+- Conversion
+- Demo
+
+Starting with point on the first listitem, start macro recording
+with =F3=. The macro:
+
+- =C-a C-f C-f= (move to the beginning of the line and move forward twice)
+- =[ ] =        (insert empty checkbox)
+- =C-n=         (move to the next line)
+
+Then type =F4= to stop recording. Now you can run the macro by pressing =F4=
+again, or use =C-x e= (and repetitive e's to repeat the macro). (After testing
+this macro, practice by creating a normal list out of the checklist again.)
+
+It's also possible to use a digits argument, e.g. =M-5 F4= or =C-5 F4= to
+execute the macro 5 times in a row. Passing digit 0 will run the macro over and
+over again until it terminates with an error (such as reaching the end of a
+buffer).
+
+Emacs has a lot more macro capacities under the hood. The =C-x C-k= prefix will
+show the possibilities (bound to keys), because I'm using the which-key package.
 
 * Calc
 
