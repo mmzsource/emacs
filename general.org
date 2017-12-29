@@ -755,6 +755,15 @@ keystrokes. So =M-b M-- M-u= is typed with your thumb on the meta key all the
 time and then simply =b - u= to move back one word, and uppercase the word
 before that.
 
+** Counting Things
+
+Emacs can count a lot of things for you, the most used ones being
+
+- =M-x count-words= and
+- =M-x count-matches=
+
+To see what emacs can count, it's best to use apropos help: =C-h a= 'count'.
+
 
 
 * Calc
