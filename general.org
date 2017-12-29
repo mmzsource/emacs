@@ -717,6 +717,45 @@ Interactive Query commands:
 | =u= or =U=       | Undo last / all replacement(s)     |
 |------------------+------------------------------------|
 
+Emacs handling of cases is quite smart. In a normal 'lowercase' search and
+replace action, it will preserve the case of each replacement. So replacing
+'hello' with 'goodbye' will result in replacing 'HELLO' with 'GOODBYE'. And if
+you search for 'Hello' or 'HELLO' emacs will /only/ replace those literal
+matches because they contain uppercase characters.
+
+** Regexp
+
+TBD? I don't use it that often; regexp is Write Once, Never Read again. Well,
+ok, you can read it, but understanding it is a different thing all together!
+
+
+** Case Change
+
+Case commands acting on regions:
+
+| Keybinding                   | Purpose                |
+|------------------------------+------------------------|
+| =C-x C-u=                    | Uppercase the region   |
+| =C-x C-l=                    | Lowercase the region   |
+| =M-x upcase-initials-region= | Capitalizes the region |
+|------------------------------+------------------------|
+
+Case commands acting on words:
+
+| Keybinding | Purpose                     |
+|------------+-----------------------------|
+| =M-c=      | *C*apitalizes the next word |
+| =M-u=      | *U*ppercases the next word  |
+| =M-l=      | *L*owercase the next word   |
+|------------+-----------------------------|
+
+Digit- and negative commands also work (of course). So =M-- M-u= will uppercase
+the last word you wrote. You don't have to release the meta key between
+keystrokes. So =M-b M-- M-u= is typed with your thumb on the meta key all the
+time and then simply =b - u= to move back one word, and uppercase the word
+before that.
+
+
 
 * Calc
 
