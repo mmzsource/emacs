@@ -834,6 +834,31 @@ argument will reverse sort order.
 In org mode, use =C-c ^= in a table column and it will ask you how you want the
 table to be sorted.
 
+** Aligning
+
+| Command             | Description                         |
+|---------------------+-------------------------------------|
+| =M-x align=         | Aligns regions based on align rules |
+| =M-x align-current= | Aligns section based on align rules |
+| =M-x align-regexp=  | Aligns region based on regexp       |
+|---------------------+-------------------------------------|
+
+With align you can align assignments and lists based on the major mode. Also in
+text mode aligning can be valuable:
+
+Cappuccino $2.00
+Caramel Latte $2.30
+Americano $3.50
+Macchiato $4.00
+
+=M-x align-regexp \$= results in
+
+Cappuccino	$2.00
+Caramel Latte	$2.30
+Americano	$3.50
+Macchiato	$4.00
+
+
 
 * Calc
 
