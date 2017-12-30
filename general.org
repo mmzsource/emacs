@@ -299,6 +299,16 @@ words before point: =M-- M-2 M-@=.
 All mark commands /append to the existing selection/ if you already have a
 region active.
 
+Very handy in practice:
+
+| Keybinding      | Purpose               |
+|-----------------+-----------------------|
+| =C-a C-SPC C-e= | Select whole line     |
+| =M-a C-SPC M-e= | Select whole sentence |
+| =C-a C-k C-y=   | Copy whole line       |
+| =M-a M-k C-y=   | Copy whole sentence   |
+|-----------------+-----------------------|
+
 *** Scrolling
 
 | Keybinding    | Purpose                             |
@@ -810,6 +820,8 @@ show the possibilities (bound to keys), because I'm using the which-key package.
 Emacs will insert a newline character when you press =RET= but it will also
 invoke the major mode's indentation engine (thanks to ~electric-indent-mode~)
 which (depending on your major mode) will indent your file correctly.
+
+
 
 * Calc
 
