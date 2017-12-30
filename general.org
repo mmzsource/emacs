@@ -826,6 +826,15 @@ indents your code or attempts to TAB-complete the word at the point. Major modes
 can (and do) override the indent command and that's why TAB mostly does what you
 mean.
 
+** Sorting
+
+Use =M-x sort-lines= to sort lines alphabetically. Calling with a universal
+argument will reverse sort order.
+
+In org mode, use =C-c ^= in a table column and it will ask you how you want the
+table to be sorted.
+
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
