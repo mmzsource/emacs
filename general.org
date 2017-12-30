@@ -821,7 +821,10 @@ Emacs will insert a newline character when you press =RET= but it will also
 invoke the major mode's indentation engine (thanks to ~electric-indent-mode~)
 which (depending on your major mode) will indent your file correctly.
 
-
+Pressing TAB will call the =indent-for-tab-command= which is a proxy that
+indents your code or attempts to TAB-complete the word at the point. Major modes
+can (and do) override the indent command and that's why TAB mostly does what you
+mean.
 
 * Calc
 
