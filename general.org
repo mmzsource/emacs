@@ -912,6 +912,28 @@ instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
 | =M-s h u=  | Removes highlighting under the point |
 |------------+--------------------------------------|
 
+** TRAMP
+
+- Monitors =C-x C-f= (a.o.) to detect when you try to access remote files
+- All tramp connections follow this syntax: =/protocol:[user@]hostname[#port]:
+  (e.g. =/ssh:homer@powerplant:/var/log/reactor.log=)
+- Supports many protocols, you'll most likely use =ssh=
+- Parses your =~/.ssh/config= file and auto-completes known hosts when you have
+  entered =ssh= as your protocol.
+- Invoking commands like =C-x d= (Dired - copying files from remote to local
+  also works transparently), =M-x rgrep=, =M-x shell=, =M-x eshell=, etc. All
+  commands are tunnelled through the remote session and the results are
+  displayed in Emacs.
+- You can request sudo access when on a remote server. To request sudo access
+  to =/etc/stab=: =/sudo:root@localhost:/etc/fstab=
+- It's also possible to multi-hop with TRAMP:
+  =/ssh:homer@powerplant|sudo:powerplant:/root/salary.txt= First, we connect
+  with =powerplant= as =homer=. Then another 'connection' invokes =sudo= and
+  opens =/root/salary.txt= as a sudo user.
+- You can also bookmark remote files with =C-x r b= and TRAMP will automatically
+  reconnect if you open a bookmark later with =C-x r b= or =C-x r l=.
+
+
 
 
 * Calc
