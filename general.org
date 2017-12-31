@@ -843,20 +843,23 @@ table to be sorted.
 | =M-x align-regexp=  | Aligns region based on regexp       |
 |---------------------+-------------------------------------|
 
-With align you can align assignments and lists based on the major mode. Also in
-text mode aligning can be valuable:
+With align you can align assignments and lists based on the current major mode.
+Also in text mode aligning can be valuable:
 
 Cappuccino $2.00
 Caramel Latte $2.30
 Americano $3.50
 Macchiato $4.00
 
-=M-x align-regexp \$= results in
+=M-x align-regexp \$= results in:
 
 Cappuccino	$2.00
 Caramel Latte	$2.30
 Americano	$3.50
 Macchiato	$4.00
+
+(although working with org mode tables might be a lot easier and powerful in
+these cases)
 
 
 
