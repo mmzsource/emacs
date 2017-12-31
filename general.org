@@ -861,6 +861,20 @@ Macchiato	$4.00
 (although working with org mode tables might be a lot easier and powerful in
 these cases)
 
+** Zapping
+
+To kill to an arbitrary character, use te /zap/ command =M-z=. Useful when you
+want to kill the characters between quotes, kill a piece of text between slashes,
+killing a sentence =M-z .= (can also be done with =M-k=), killing an XML tag
+=M-z >=, etc.
+
+It kills up-to the specified char. If you want to kill the text between these
+quotes "Sometext" (assuming point is on =S=), simply type =M-z ""=,
+the first ="= indicating the char to zap to and the second ="= reinserting a
+="= . An alternative would be to zap to =t= twice with either =M-z t M-z t= or
+with =M-2 M-z t=. I prefer the =M-z ""= solution, because it requires less
+thinking; you simply zap up to a char.
+
 
 
 * Calc
