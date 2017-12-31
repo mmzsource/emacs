@@ -935,6 +935,29 @@ instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
 
 
 
+** EWW - Emacs Web Wowser
+
+| Keybinding       | Description                                  |
+|------------------+----------------------------------------------|
+| =M-x eww=        | Open eww and insert an URL or search term    |
+| =M-x browse-url= | To open things in a web browser              |
+| =C-x / <key>=    | Activate (search)engine mode. See config.org |
+|------------------+----------------------------------------------|
+
+In Eww:
+
+| Keybinding     | Description                          |
+|----------------+--------------------------------------|
+| =TAB=, =S-TAB= | Cycle to next/prev hyperlink         |
+| =q=            | Quit EWW                             |
+| =&=            | Open page with =M-x browse-url=      |
+| =B=            | Show bookmarks                       |
+| =b=            | Add bookmark                         |
+| =H=            | Show browser history                 |
+| =l=, =r=       | Browse backward / forward in history |
+| =R=            | Enable Reader mode                   |
+| =M-s M-w=      | Search for point in EWW              |
+|----------------+--------------------------------------|
 
 * Calc
 
