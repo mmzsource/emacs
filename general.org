@@ -900,6 +900,20 @@ dictionaries).
 To insert a literal ASCII control character, use =C-q= or 'quoted insert'. For
 instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
 
+* Workflow
+
+** Highlighters
+
+| Keybinding | Description                          |
+|------------+--------------------------------------|
+| =M-s h p=  | Highlights a phrase                  |
+| =M-s h r=  | Highlights a regular expression      |
+| =M-s h .=  | Highlights symbol at the point       |
+| =M-s h u=  | Removes highlighting under the point |
+|------------+--------------------------------------|
+
+
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
