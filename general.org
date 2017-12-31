@@ -306,7 +306,8 @@ Very handy in practice:
 | =C-a C-SPC C-e= | Select whole line     |
 | =M-a C-SPC M-e= | Select whole sentence |
 | =C-a C-k C-y=   | Copy whole line       |
-| =M-a M-k C-y=   | Copy whole sentence   |
+| =M-a M-k=       | Copy whole sentence   |
+| =M-a M-z .=     | Copy whole sentence   |
 |-----------------+-----------------------|
 
 *** Scrolling
@@ -741,7 +742,6 @@ matches because they contain uppercase characters.
 TBD? I don't use it that often; regexp is Write Once, Never Read again. Well,
 ok, you can read it, but understanding it is a different thing all together!
 
-
 ** Case Change
 
 Case commands acting on regions:
@@ -776,7 +776,6 @@ Emacs can count a lot of things for you, the most used ones being
 - =M-x count-matches=
 
 To see what emacs can count, it's best to use apropos help: =C-h a= 'count'.
-
 
 ** Keyboard Macros
 
@@ -875,7 +874,26 @@ the first ="= indicating the char to zap to and the second ="= reinserting a
 with =M-2 M-z t=. I prefer the =M-z ""= solution, because it requires less
 thinking; you simply zap up to a char.
 
+** Spell Checking
 
+I use flyspell to check words while typing. After =brew install aspell= the
+spelling dependency, I have configured it in my configuration file to work for
+all text modes (except a few). For code you should use =M-x flyspell-prog-mode=
+which will limit the spell checking to comments, strings and doc strings.
+
+| Keys and Commands        | Description                                    |
+|--------------------------+------------------------------------------------|
+| =M-$=                    | Spell checks word at the point                 |
+| =M-x flyspell-mode=      | Minor mode that highlights spelling errors     |
+| =M-x flyspell-prog-mode= | Only highlights strings, docstrings & comments |
+| =M-x ispell-buffer=      | Run spell check on buffer                      |
+| =M-x ispell-region=      | Run spell check on region                      |
+|--------------------------+------------------------------------------------|
+
+In check mode, you can type =i= to add a word to your personal library.
+
+More flyspell info can be found [[https://www.emacswiki.org/emacs/FlySpell][here.]] (including how to switch easily between
+dictionaries).
 
 * Calc
 
