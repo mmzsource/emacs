@@ -895,6 +895,11 @@ In check mode, you can type =i= to add a word to your personal library.
 More flyspell info can be found [[https://www.emacswiki.org/emacs/FlySpell][here.]] (including how to switch easily between
 dictionaries).
 
+** Quoted insert
+
+To insert a literal ASCII control character, use =C-q= or 'quoted insert'. For
+instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
