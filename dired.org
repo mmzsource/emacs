@@ -6,77 +6,125 @@ needed to show thumbnails and images.
 
 ** Usage
 
+*** General
 
-| Keybinding | Description                            |
-|------------+----------------------------------------|
-| C-x d      | Opens dired mode                       |
-| g          | Refresh dired buffer                   |
-| q          | Quit dired mode                        |
-|------------+----------------------------------------|
-| RET        | Open selected directory                |
-| +          | Insert new Directory                   |
-| i          | Show contents of subdirectory          |
-| ^          | Return to parent directory             |
-| f          | Open selected file                     |
-| o          | Open selected file in other window     |
-|------------+----------------------------------------|
-| C          | Copy file(s)                           |
-| D          | Delete file(s)                         |
-| R          | Rename file(s)                         |
-| M          | Change Mode (permissions)  of files(s) |
-| Z          | Zip or unZip file(s)                   |
-|------------+----------------------------------------|
+| Keybinding | Description                        |
+|------------+------------------------------------|
+| =C-x d=    | Opens dired mode                   |
+| =g=        | Refresh dired buffer               |
+| =n=, =C-n= | Move point down a listing          |
+| =p=, =C-p= | Move point up a listing            |
+| =q=        | Quit dired mode                    |
+|------------+------------------------------------|
+| =RET=      | Open selected file or directory    |
+| =+=        | Insert new Directory               |
+| =i=        | Show contents of sub-directory     |
+| =^=        | Go to parent directory             |
+| =f=        | Open selected file                 |
+| =o=        | Open selected file in other window |
+| =s=        | Toggle sorting by name / date      |
+| =<=, =>=   | Jumps to prev/next directory       |
+| j          | Jumps to file                      |
+|------------+------------------------------------|
 
+Since I have activated =IDO-mode=, I can type =C-d= when finding files with =C-x
+C-f= to open a dired buffer in that file's directory.
+
+When you press =RET= in a directory, a /new/ dired buffer is opened, so pressing
+=q= after visiting
+
+*** Marking & Unmarking
+
+| Keybinding | Description        |
+|------------+--------------------|
+| =m=        | Marks active       |
+| =u=        | Unmarks active     |
+| =U=        | Unmarks everything |
+| =d=        | Flags for deletion |
+|------------+--------------------|
+
+Marks are never affected by the delete command and vice versa, except for one
+command that deletes marked files.
+
+*** Mark specific things
+
+| Keybinding | Description              |
+|------------+--------------------------|
+| =* m=      | Marks region             |
+| =* u=      | Unmarks region           |
+| =* %=      | Marks files by regexp    |
+| =* .=      | Marks files by extension |
+| =t=, =* t= | Toggles marking          |
+| =* c=      | Changes mark             |
+|------------+--------------------------|
+
+*** Operations
+
+| Keybinding | Description                           |
+|------------+---------------------------------------|
+| =C=        | Copy file(s)                          |
+| =R=        | Rename or move files                  |
+|------------+---------------------------------------|
+| =D=        | Deletes /marked/ (shown as *)         |
+| =x=        | Deletes /flagged/ (shown as D)        |
+|------------+---------------------------------------|
+| =O=        | Change owner                          |
+| =G=        | Change group                          |
+| =M=        | Change mode (permissions) of files(s) |
+|------------+---------------------------------------|
+| =c=        | Compress marked to a file             |
+| =Z=        | Zip or unZip file(s)                  |
+|------------+---------------------------------------|
 
 *** Create new file
 
 This works inside and outside a dired buffer:
 
-| Keybinding                | Description                                       |
-|---------------------------+---------------------------------------------------|
-| C-x C-f <your-filename>   | Find file (or create one if it doesn't yet exist) |
-| M-! touch <your-filename> | Simply run the touch shell cmd                    |
-|---------------------------+---------------------------------------------------|
+| Keybinding                  | Description                                       |
+|-----------------------------+---------------------------------------------------|
+| =C-x C-f <your-filename>=   | Find file (or create one if it doesn't yet exist) |
+| =M-! touch <your-filename>= | Simply run the touch shell cmd                    |
+|-----------------------------+---------------------------------------------------|
 
 *** Find by name
 
-M-x find-name-dired
+=M-x find-name-dired=
 
 Reads arguments /directory/ and /pattern/ and shows all the files in
 /directory/ or its subdirectories whose individual names match
 /pattern/.
 
 So to find all .org files in directory ~/Projects and its
-subdirectories:
+sub-directories:
 
-- M-x find-name-dired
+- =M-x find-name-dired=
 - ~/Projects
 - *.org
 - Put cursor on file you were looking for
-- RET
+- =RET=
 
 *** Find text in file
 
-M-x find-grep-dired
+=M-x find-grep-dired=
 
 Reads arguments /directory/ and /regexp/ and shows all the files in
-/directory/ or its subdirectories that contain a match for /regexp/.
+/directory/ or its sub-directories that contain a match for /regexp/.
 
 So to find the file(s) which contain the text 'directory' in
-~/Projects/emacs and its subdirectories:
+~/Projects/emacs and its sub-directories:
 
-- M-x find-grep-dired
+- =M-x find-grep-dired=
 - ~/Projects
 - directory
 
 *** Viewing image thumbnails
 
-M-x image-dired
+=M-x image-dired=
 
 Reads argument /directory/, finds image files within that directory
 and shows thumbnails of those images.
 
-You can select the thumbnails one by one and typing <RET> will display
+You can select the thumbnails one by one and typing =RET= will display
 a sized version of the image in another buffer.
 
 ** Links
