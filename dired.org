@@ -33,6 +33,10 @@ C-f= to open a dired buffer in that file's directory.
 When you press =RET= in a directory, a /new/ dired buffer is opened, so pressing
 =q= after visiting
 
+Typing =i= on a directory in dired inserts the sub directory in the same dired
+buffer. This enables you to mark files in =/fiets/= but also in =/fiets/bel/= at
+the same time.
+
 *** Marking & Unmarking
 
 | Keybinding | Description        |
