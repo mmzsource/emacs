@@ -170,6 +170,7 @@ branches.
 |------------+------------------|
 
 * Movement
+** Introduction
 
 Movement in Emacs is local, regional or global:
 
@@ -573,7 +574,6 @@ line-number-mode= . In my configuration, current line and column number are
 displayed in the information line.
 
 * Editing
-
 ** Kill Text
 
 | Keybinding        | Purpose                     |
@@ -901,7 +901,6 @@ To insert a literal ASCII control character, use =C-q= or 'quoted insert'. For
 instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
 
 * Workflow
-
 ** Highlighters
 
 | Keybinding | Description                          |
@@ -932,8 +931,6 @@ instance, =C-q ESC= inserts the ASCII control code =^[= also known as ESC.
   opens =/root/salary.txt= as a sudo user.
 - You can also bookmark remote files with =C-x r b= and TRAMP will automatically
   reconnect if you open a bookmark later with =C-x r b= or =C-x r l=.
-
-
 
 ** EWW - Emacs Web Wowser
 
