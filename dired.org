@@ -90,7 +90,23 @@ This works inside and outside a dired buffer:
 | =M-! touch <your-filename>= | Simply run the touch shell cmd                    |
 |-----------------------------+---------------------------------------------------|
 
-*** Find by name
+*** Finding files and directories
+**** Find with a pattern
+
+=M-x find-dired=
+
+Asks for a starting directory and runs the =find= command with the arguments you
+provide. So for instance to find all files ending with the extension .org in and
+under ~/Projects:
+
+- =M-x find-dired=
+- ~/Projects
+- -name '*.org'
+
+And the results are shown in a new buffer where you can navigate to one of the
+found org files and open it by pressing =RET=.
+
+**** Find by name
 
 =M-x find-name-dired=
 
@@ -107,7 +123,9 @@ sub-directories:
 - Put cursor on file you were looking for
 - =RET=
 
-*** Find text in file
+Similar to =find= with =-name=
+
+**** Find text in file
 
 =M-x find-grep-dired=
 
