@@ -179,7 +179,6 @@ Movement in Emacs is local, regional or global:
 - Global: moving around buffers
 
 ** Local & Regional
-
 *** Bindings
 
 | Keybinding             | Purpose                                                                    |
@@ -955,6 +954,29 @@ In Eww:
 | =R=            | Enable Reader mode                   |
 | =M-s M-w=      | Search for point in EWW              |
 |----------------+--------------------------------------|
+
+** Shell Commands
+
+| Keybinding | Description                           |
+|------------+---------------------------------------|
+| =M-!=      | Calls shell command and prints output |
+| =C-u M-!=  | As above, but inserts into buffer     |
+| =M-&=      | Like =M-!= but asynchronous           |
+| =C-u M-&=  | Like =C-u M-!= but asynchronous       |
+|------------+---------------------------------------|
+
+=M-|= takes the region as input
+
+abc
+def
+ghi
+abc
+klm
+xyz
+
+So if you select the previous character combinations and type =M-|= sort, the
+output will be sorted in the mini-buffer. =C-u M-|= will /replace/ the region
+with the output of the command.
 
 * Calc
 
