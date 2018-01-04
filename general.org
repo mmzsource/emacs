@@ -978,6 +978,24 @@ So if you select the previous character combinations and type =M-|= sort, the
 output will be sorted in the mini-buffer. =C-u M-|= will /replace/ the region
 with the output of the command.
 
+Furthermore there's also something like =M-x compile= that can do a lot more
+than compilation.
+
+| Commands        | Description                       |
+|-----------------+-----------------------------------|
+| =M-x compile=   | Runs a command, and tracks errors |
+| =M-x recompile= | Re-run last command               |
+|-----------------+-----------------------------------|
+
+Use it for instance like this:
+
+=M-x compile= =java -version=
+
+That will create a buffer with the results of running that command in the shell.
+
+=M-x compile= assumes you want to use =make=, so simply delete that if you want
+to fire off another shell command.
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
