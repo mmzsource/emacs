@@ -996,6 +996,50 @@ That will create a buffer with the results of running that command in the shell.
 =M-x compile= assumes you want to use =make=, so simply delete that if you want
 to fire off another shell command.
 
+** Shells
+
+There are three ways of interacting with shells in Emacs: =M-x shell= (a wrapper
+around an existing shell), =M-x eshell= (a complete shell implementation written
+in elisp) and =M-x ansi-term= (a terminal emulator).
+
+(for comparison, run the three of them with the =top= command.)
+
+*** =M-x shell= - shell mode
+
+- calls underlying bash implementation and redirects =stdin=, =stdout= and
+  =stderr=
+- Because of the IO redirection, =TAB= completion for bash commands won't work,
+  =TAB= completion for hostnames, files and paths, etc. do work however.
+- Because it's completely text, you can kill and yank, but things like =top= and
+  =man= don't work quite well (but in those particular cases you can also use
+  =M-x proced= and =M-x man= respectively)
+
+*** =M-x eshell= - elisp shell
+
+- Complete shell written in elisp and communicating directly with the host OS.
+- Consistent shell across all platforms Emacs is running on
+- Ability to redirect the output of commands directly to a buffer
+- Does not support interactive programs like =top=, but creates an =ansi-term=
+  instance directly from eshell.
+- every command you type is first filtered through eshell's own emulation layer,
+  then through emacs own interactive commands and then finally through programs
+  in your =$PATH= or in the current directory. So for example typing =dired .=
+  will open a =M-x dired= session in the current directory.
+
+*** =M-x ansi-term= - terminal emulator
+
+- terminal emulator so you can run interactive programs like `top` or even `vim`
+  or `emacs`
+- Best terminal experience in Emacs, but you'll have to switch modes to use it
+  as a buffer
+- Quite slow and not supporting all shell features
+
+| Keybinding | Description                                                |
+|------------+------------------------------------------------------------|
+| =C-c C-j=  | Switch to line mode (like typical emacs buffer)            |
+| =C-c C-k=  | Switch to character mode (like a normal terminal emulator) |
+|------------+------------------------------------------------------------|
+
 * Calc
 
 Might come in handy =M-x calc=. For info you might want to read [[https://blog.markhepburn.com/2013/12/07/andrew-hyatts-emacs-calc-tutorials][some emacs calc
@@ -1013,3 +1057,5 @@ info pages on the web.
 - =M-x pong=
 - =M-x snake=
 - =M-x tetris=
+- =M-x ansi-term= =vi=
+- =M-x ansi-term= =emacs=
